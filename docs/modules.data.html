@@ -111,6 +111,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="dbschema.html">Database schema</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tests.html">Tests modules</a></li>
 </ul>
 
             
@@ -571,6 +572,12 @@ If before is specified, returns only the one sent before that timestamp</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="modules.data.pending_post.PendingPost.save_post">
+<span class="sig-name descname"><span class="pre">save_post</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#modules.data.pending_post.PendingPost.save_post" title="Permalink to this definition">¶</a></dt>
+<dd><p>Saves the pending_post in the database</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="modules.data.pending_post.PendingPost.set_admin_vote">
 <span class="sig-name descname"><span class="pre">set_admin_vote</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">admin_id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">approval</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#modules.data.pending_post.PendingPost.set_admin_vote" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adds the vote of the admin on a specific post, or update the existing vote, if needed</p>
@@ -757,6 +764,12 @@ If before is specified, returns only the one sent before that timestamp</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="modules.data.published_post.PublishedPost.save_post">
+<span class="sig-name descname"><span class="pre">save_post</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#modules.data.published_post.PublishedPost.save_post" title="Permalink to this definition">¶</a></dt>
+<dd><p>Saves the published_post in the database</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="modules.data.published_post.PublishedPost.set_user_vote">
 <span class="sig-name descname"><span class="pre">set_user_vote</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user_id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vote</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#modules.data.published_post.PublishedPost.set_user_vote" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adds the vote of the user on the post, updates the existing vote or deletes it</p>
@@ -922,6 +935,12 @@ This means that all previous votes associated with this post, if present, will b
 <dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></p>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="modules.data.report.Report.save_report">
+<span class="sig-name descname"><span class="pre">save_report</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#modules.data.report.Report.save_report" title="Permalink to this definition">¶</a></dt>
+<dd><p>Saves the report in the database</p>
 </dd></dl>
 
 </dd></dl>

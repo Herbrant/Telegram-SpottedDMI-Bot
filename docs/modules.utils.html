@@ -101,11 +101,13 @@
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Utils modules</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#module-modules.utils.info_util">info_util</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#module-modules.utils.keyboard_util">keyboard_util</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-modules.utils.conversation_util">conversation_util</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="dbschema.html">Database schema</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tests.html">Tests modules</a></li>
 </ul>
 
             
@@ -625,6 +627,38 @@ Callback_data format: &lt;callback_family&gt;_&lt;callback_name&gt;,[arg]</p>
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>InlineKeyboardMarkup</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-modules.utils.conversation_util">
+<span id="conversation-util"></span><h2>conversation_util<a class="headerlink" href="#module-modules.utils.conversation_util" title="Permalink to this headline">¶</a></h2>
+<p>Common functions needed in conversation handlers</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="modules.utils.conversation_util.conv_cancel">
+<span class="sig-prename descclassname"><span class="pre">modules.utils.conversation_util.</span></span><span class="sig-name descname"><span class="pre">conv_cancel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">family</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Callable</span></span></span><a class="headerlink" href="#modules.utils.conversation_util.conv_cancel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a function used to handle the /cancel command in the conversation</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>family</strong> – family of the command</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>function used to handle the /cancel command</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="modules.utils.conversation_util.conv_fail">
+<span class="sig-prename descclassname"><span class="pre">modules.utils.conversation_util.</span></span><span class="sig-name descname"><span class="pre">conv_fail</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">family</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Callable</span></span></span><a class="headerlink" href="#modules.utils.conversation_util.conv_fail" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a function used to handle any error in the conversation</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>family</strong> – family of the command</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>function used to handle the error</p>
 </dd>
 </dl>
 </dd></dl>
