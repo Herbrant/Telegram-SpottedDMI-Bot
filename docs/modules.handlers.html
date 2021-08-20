@@ -102,6 +102,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#module-modules.handlers.callback_handlers">callback_handlers</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#module-modules.handlers.cancel">cancel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#module-modules.handlers.clean_pending">clean_pending</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-modules.handlers.db_backup">db_backup</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#module-modules.handlers.constants">constants</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#module-modules.handlers.forwarded_post">forwarded_post</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#module-modules.handlers.help">help</a></li>
@@ -402,6 +403,25 @@ Automatically rejects all pending posts that are older than the chosen amount of
 </dd></dl>
 
 </div>
+<div class="section" id="module-modules.handlers.db_backup">
+<span id="db-backup"></span><h2>db_backup<a class="headerlink" href="#module-modules.handlers.db_backup" title="Permalink to this headline">¶</a></h2>
+<p>/db_backup command</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="modules.handlers.db_backup.db_backup_cmd">
+<span class="sig-prename descclassname"><span class="pre">modules.handlers.db_backup.</span></span><span class="sig-name descname"><span class="pre">db_backup_cmd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">update</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">telegram.update.Update</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">telegram.ext.callbackcontext.CallbackContext</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.handlers.db_backup.db_backup_cmd" title="Permalink to this definition">¶</a></dt>
+<dd><p>Handles the /db_backup command.
+Automatically upload and send current version of db for backup</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>update</strong> (<em>Update</em>) – update event</p></li>
+<li><p><strong>context</strong> (<em>CallbackContext</em>) – context passed by the handler</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
 <div class="section" id="module-modules.handlers.constants">
 <span id="constants"></span><h2>constants<a class="headerlink" href="#module-modules.handlers.constants" title="Permalink to this headline">¶</a></h2>
 <p>Constants used by the bot handlers</p>
@@ -462,7 +482,14 @@ Automatically rejects all pending posts that are older than the chosen amount of
 <dl class="py function">
 <dt class="sig sig-object py" id="modules.handlers.job_handlers.db_backup_job">
 <span class="sig-prename descclassname"><span class="pre">modules.handlers.job_handlers.</span></span><span class="sig-name descname"><span class="pre">db_backup_job</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">telegram.ext.callbackcontext.CallbackContext</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modules.handlers.job_handlers.db_backup_job" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Job called each day at 05:00 utc.
+Automatically upload and send last version of db for backup</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>context</strong> (<em>CallbackContext</em>) – context passed by the jobqueue</p>
+</dd>
+</dl>
+</dd></dl>
 
 </div>
 <div class="section" id="module-modules.handlers.purge">
